@@ -1,22 +1,36 @@
 #include<iostream>
+#include<string>
 using namespace std;
+
 int main(){//inicio main
 
-    int edad, opcion;
-
+    int edad, opcion, dia, mes, year;
+    
     do{
+        string meses[]={"enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiempre", "octubre", "noviembre", "diciembre"};
 
-    cout<<"Ingrese su edad"<<endl;
-    cin>>edad;
+    cout<<"Ingrese su fecha de nacimiento dia, mes, year"<<endl;
+    cin>>dia >>mes >>year;
+    edad = 2025-year;
     if(edad <=0 || edad >= 100){
-        cout<<"Igrese su edad"<<endl;
+        cout<<"Igrese su edad valida"<<endl;
+    }else{
+        cout<<dia<<" "<<meses[mes-1]<<" "<<"del"<<" "<<year<<endl<<endl;
+        cout<<"You are"<<" "<<edad<<" "<<"years old"<<endl;
     }
      } while(edad <=0 || edad >= 100);
 
     if(edad < 18){
         cout<<"Usted es menor de edad"<<endl;
+
     }else{
-        cout<<"Bienvenido"<<endl<<endl;
+
+        if(edad >=18 && edad <=25){
+        cout<<"Hey brother!!"<<endl<<endl;
+        }else{
+            cout<<"Bienvenido caballero."<<endl<<endl;
+        }
+    
         cout<<"Menu"<<endl;
         cout<<"Opcion 1"<<endl;
         cout<<"Opcion 2"<<endl;
