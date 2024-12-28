@@ -2,12 +2,14 @@
 using namespace std;
 int main(){
 
-    int numero, opcion;
+    int edad, opcion;
 
-    cout<<"ingrese un numero"<<endl;
-    cin>>numero;
-    if(numero<18){
+    cout<<"Ingrese su edad"<<endl;
+    cin>>edad;
+    if(edad<18 && edad >0){
         cout<<"menor de edad"<<endl;
+    }else if(edad <=0 || edad >= 100){
+        cout<<"Ingrese solo valores validos"<<endl;
     }else{
         cout<<"opcion 1"<<endl;
         cout<<"opcion 2"<<endl;
